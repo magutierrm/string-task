@@ -13,8 +13,8 @@ public class Task {
      * @param string The string from which duplicate characters are to be removed.
      * @return A string without duplicate characters.
      */
-
     public static String removeDuplicates(String string) {
+        if (string == null) return null;
         Set<Character> hashSet = new LinkedHashSet<>();
         StringBuilder withoutDuplicates = new StringBuilder();
         for (Character character : string.toCharArray()) {

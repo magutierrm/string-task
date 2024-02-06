@@ -4,9 +4,15 @@ package com.magutierr;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 
 public class RemoveDuplicateTests {
+
+    @Test
+    public void givenNull_thenReturnNull() {
+        assertNull(Task.removeDuplicates(null));
+    }
 
     @Test
     public void givenStrings_thenRemoveAnyDuplicate() {
@@ -33,7 +39,6 @@ public class RemoveDuplicateTests {
         givenStrings_thenCheckForEquality(Task.removeDuplicates("2++2?"), "2+?");
     }
 
-    @Test
     public void givenStrings_thenCheckForEquality(String actual, String expected) {
         assertThat(actual).isEqualTo(expected);
     }
