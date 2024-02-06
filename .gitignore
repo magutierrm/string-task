@@ -1,0 +1,17 @@
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Gradle
+.gradle/
+build/
+
+# Compiled Java
+*.class
+
+# Dependencies
+build/
+bin/
+out/
